@@ -1,0 +1,27 @@
+let edad=0;
+let salida=false;
+
+while (salida==false) {
+    edad=prompt("Ingrese su edad para saber si puede aceder o no.")
+    if (isNaN(edad)==false){
+        if (edad>=1 && edad<=120) {
+            if (edad>=18 && edad<=120){
+                alert("Si tiene permiso de acceso")
+                salida=true;
+            }
+            else{
+                alert("Eres menor de edad por lo tanto no tienes acceso.")
+                salida=true;
+            }
+
+        }
+        else {
+            alert("Lo sentimos has ingresado un número no permitido, vuelve a ingresar un número que este entre los 1 y 120 años")
+            salida=false;
+        }
+    }
+    else if (isNaN(edad)==true){
+        alert("Lo sentimos no has ingresado un número, vuelve a realizar el registro")
+        salida=false;
+    }
+}
