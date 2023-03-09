@@ -14,10 +14,12 @@ alert("Gracias por ingresar a nuestra pag de gestion de riesgos, revisa nuestro 
 
 while(inicio==true){
     menu=parseInt(prompt("1.Ingreso de información.\n2.Información acerca de los rios de Colombia.\n3.Salir."));
+    inicioSub1=true;
     switch(menu){
         case 1:
             while(inicioSub1==true){
             submenu=parseInt(prompt("1.Registro de datos.\n2.Actualizar información.\n3.Salir."));
+            inicioSub2=true;
             switch(submenu){       
                 case 1:
                     while(inicioSub2==true){
