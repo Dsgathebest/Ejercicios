@@ -1,11 +1,22 @@
 let listaR=[];
+
+let rio = {
+    nombreR:String,
+    // nombreR=nombre del rio.
+    ingresoPR:Number,
+    //ingreso de la profundidad del rio.
+    ingresoReR:String
+    //ingreso de la región del rio(ingresoReR),
+}
+let rios= rio;
+
+// let rioInf;
 //rioI es donde va a ir toda la informaciòn de un rio.
-let rioInf;
-//ingreso de la región del rio(ingresoRU),
-let ingresoReR,nombreR="";
-//ingreso de la profundidad del rio.
-let ingresoPR,menu,submenu, cantidadR= Number;
-let inicio,inicioSub1,inicioSub2=String
+
+// let ingresoReR,nombreR="";
+
+let menu,submenu, cantidadR= Number;
+let inicio,inicioSub1,inicioSub2,prueba=String
 inicio=true
 inicioSub1=true
 inicioSub2=true
@@ -41,11 +52,17 @@ while(inicio==true){
                         alert("A continuación tendra que llenar toda la información del rio para nosotros poder guardarlo en nuestra base de datos.")
                         for(i=0;i<cantidadR;i++){
                             
-                            nombreR=prompt("Ingrese el nombre del rio:");
-                            ingresoPR=parseInt(prompt("Ingrese la profundidad del rio en (m)metros."));
-                            ingresoReR=prompt("Ingrese la región en la que se encuentra el rio.")
-                            rioInf=[{1:nombreR,2:ingresoPR,3:ingresoReR}];
-                            listaR[i]=(rioInf);
+                            // nombreR=prompt("Ingrese el nombre del rio:");
+                            // ingresoPR=parseInt(prompt("Ingrese la profundidad del rio en (m)metros."));
+                            // ingresoReR=prompt("Ingrese la región en la que se encuentra el rio.")
+                            // rioInf=[{1:nombreR,2:ingresoPR,3:ingresoReR}];
+                            // listaR[i]=(rioInf);
+                            rios.nombreR=prompt("Ingrese el nombre del rio:");
+                            rios.ingresoPR=parseInt(prompt("Ingrese la profundidad del rio en (m)metros."));
+                            rios.ingresoReR=prompt("Ingrese la región en la que se encuentra el rio.");
+                            alert(rios);
+                            listaR.push(rios);
+                            
                             alert("Registro exitoso.");
                             
                         }
@@ -57,7 +74,8 @@ while(inicio==true){
 
                 case 2:
                     // alert(listaR);
-                    console.table(listaR)
+                    prueba=listaR.filter(menor=>menor.ingresoPR>=3 );
+                    console.table(prueba)
                     inicioSub1=true;
                     break;
                 case 3:
