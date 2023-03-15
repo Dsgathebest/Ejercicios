@@ -1,5 +1,5 @@
 let listaR=[];
-
+let rios= [];
 let rio = {
     nombreR:String,
     // nombreR=nombre del rio.
@@ -8,7 +8,7 @@ let rio = {
     ingresoReR:String
     //ingreso de la región del rio(ingresoReR),
 }
-let rios= rio;
+
 
 // let rioInf;
 //rioI es donde va a ir toda la informaciòn de un rio.
@@ -57,12 +57,14 @@ while(inicio==true){
                             // ingresoReR=prompt("Ingrese la región en la que se encuentra el rio.")
                             // rioInf=[{1:nombreR,2:ingresoPR,3:ingresoReR}];
                             // listaR[i]=(rioInf);
-                            rios.nombreR=prompt("Ingrese el nombre del rio:");
-                            rios.ingresoPR=parseInt(prompt("Ingrese la profundidad del rio en (m)metros."));
-                            rios.ingresoReR=prompt("Ingrese la región en la que se encuentra el rio.");
-                            alert(rios);
-                            listaR.push(rios);
+                            rio[0]=prompt("Ingrese el nombre del rio:");
+                            rio[1]=parseInt(prompt("Ingrese la profundidad del rio en (m)metros."));
+                            rio[2]=prompt("Ingrese la región en la que se encuentra el rio.");
                             
+                            
+                            listaR.push(rio);
+                            // alert(listaR);
+
                             alert("Registro exitoso.");
                             
                         }
@@ -74,9 +76,7 @@ while(inicio==true){
 
                 case 2:
                     // alert(listaR);
-                    prueba=listaR.filter(menor=>menor.ingresoPR>=3 );
-                    console.table(prueba)
-                    inicioSub1=true;
+                    
                     break;
                 case 3:
                     inicioSub1=false;
@@ -85,7 +85,9 @@ while(inicio==true){
         
             }
         case 2:
+            // prueba=listaR.filter(menor=>menor.ingresoPR>=3 );
             console.table(listaR)
+            inicioSub1=true;
             inicio=true;
         break;
         case 3:
